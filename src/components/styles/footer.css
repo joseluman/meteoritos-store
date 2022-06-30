@@ -1,0 +1,28 @@
+footer {
+    background-color: #011432;
+}
+.title-footer,
+.content-footer p {
+    letter-spacing: 2px;
+    color: white;
+}
+.content-footer p{
+    font-weight: 100;
+}
+.copyright{
+    background-color: #3347c1;
+}
+.copyright span{
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.redes span{
+    color: white;
+    letter-spacing: 3px;
+}
+.redes svg{
+    width: 50px;
+    margin: 10px;
+    fill: white;
+}
