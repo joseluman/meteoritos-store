@@ -15,7 +15,7 @@ function Home() {
   return <>
     <SliderLayout images={SliderImagesDesktop} />
     <SliderLayoutMobile images={SliderImagesMobile} />
-    <ItemListContainer />
+    <ItemListContainer greeting={"Inicio"}/>
   </> 
 }
 
