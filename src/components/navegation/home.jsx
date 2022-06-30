@@ -1,6 +1,6 @@
 import React from 'react'
-import SliderLayout from './blocks/slider-layout';
-import SliderLayoutMobile from './blocks/slider-layout-mobile';
+import SliderLayout from './blocks/Slider/slider-layout';
+import SliderLayoutMobile from './blocks/Slider/slider-layout-mobile';
 import { SliderImagesDesktop } from './blocks/images/slider-images-desktop'
 import { SliderImagesMobile } from './blocks/images/slider-images-mobile'
 import "swiper/css";
