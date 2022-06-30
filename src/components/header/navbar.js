@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import Logo from '../assets/react.png';
-import ShoppingBagIcon from '../assets/shopping-cart.png'
 import '../styles/navbar.css';
+import CartWidget from './CartWidget';
+
 const NavBar = () => {
     return (
             <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid">
                     <Link className="navbar-brand" to="/"><img src={Logo} alt="logo" /></Link>
                         <div className='icons-mobile'>
-                            <Link className="nav-link cart-mobile" to="/cart"><img src={ShoppingBagIcon} alt="cart" /></Link>
+                            <Link className="nav-link cart-mobile" to="/cart"><CartWidget /></Link>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                                     <span className="navbar-toggler-icon light"></span>
                             </button>
@@ -26,7 +27,7 @@ const NavBar = () => {
                                     <Link className="nav-link" to="/contacto">Contacto</Link>
                                 </li>
                                 <li className="nav-item hiden-mobile">
-                                    <Link className="nav-link" to="/cart"><img src={ShoppingBagIcon} alt="cart" /></Link>
+                                   <CartWidget />
                                 </li>
                             </ul>
                         </div>

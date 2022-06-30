@@ -8,13 +8,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import '../styles/slider-layout.css';
+import ItemListContainer from './blocks/ItemListContainer';
 
 
 function Home() {
   return <>
     <SliderLayout images={SliderImagesDesktop} />
     <SliderLayoutMobile images={SliderImagesMobile} />
-    <div className='content-title'>Inicio</div>
+    <ItemListContainer />
   </> 
 }
 
