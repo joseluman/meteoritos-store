@@ -3,30 +3,35 @@
         "nombre": "Piedra Lunar",
         "id": 5231,
         "precio": 349990,
+        "descripcion": "Piedra extraida de la luna por habitantes de Neptuno",
         "productImage": "/img/asteroide.png" 
     },
     {
         "nombre": "Caníca de Teletransporte E.P.A",
         "id": 3312,
         "precio": 600000,
+        "descripcion": "Te ayuda a viajar entre realidades paralelas, fue creada por un habitande de DEXO E-39",
         "productImage": "/img/mercurio.png" 
     },
     {
         "nombre": "U.F.O Planeta DEXO E-39",
         "id": 4839,
         "precio": 1000000,
+        "descripcion": "Nave encontrada en una expedición a Saturno, su técnología es 200 años más avanzada que en la tierra.",
         "productImage": "/img/ufo.png" 
     },
     {
         "nombre": "O.V.N.I Galaxia UWU",
         "id": 3451,
         "precio": 459000,
+        "descripcion": "Alienígena capturado en Plutón, se mantiene encarcelado 24/7, solo sabe decir UWU",
         "productImage": "/img/ovni.png" 
     },
     {
         "nombre": "2 Boletos para viaje a Urano",
         "id": 3458,
         "precio": 235768,
+        "descripcion": "Podrás viajar a Urano y precenciar el eclípse de sus 27 lunas.",
         "productImage": "/img/boletos-de-avion.png" 
     }
 ]

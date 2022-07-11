@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 import '../styles/slider-layout.css';
 import ItemListContainer from './blocks/ItemListContainer';
 import { Footer } from '../footer/Footer';
+import ItemDetailContainer from './blocks/ItemDetailContainer';
 
 
 function Home() {
@@ -18,7 +19,9 @@ function Home() {
     <SliderLayout images={SliderImagesDesktop} />
     <SliderLayoutMobile images={SliderImagesMobile} />
     <ItemListContainer greeting={"Productos Destacados"}/>
+    <ItemDetailContainer />
     <Footer images={FooterImages} />
+    
   </> 
 }
 
