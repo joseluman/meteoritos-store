@@ -1,5 +1,6 @@
 import '../styles/footer.css'
 import 'animate.css';
+
 export const Footer = props => {
   return (
     <footer>

@@ -10,15 +10,14 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import '../styles/slider-layout.css';
 import ItemListContainer from './blocks/ItemListContainer';
-import { ItemCount } from './blocks/cartFunctions/ItemCount';
 import { Footer } from '../footer/Footer';
+
 
 function Home() {
   return <>
     <SliderLayout images={SliderImagesDesktop} />
     <SliderLayoutMobile images={SliderImagesMobile} />
     <ItemListContainer greeting={"Productos Destacados"}/>
-    <ItemCount stock={10} initial={1}/>
     <Footer images={FooterImages} />
   </> 
 }

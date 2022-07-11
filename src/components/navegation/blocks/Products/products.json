@@ -1,0 +1,32 @@
+[
+    {
+        "nombre": "Piedra Lunar",
+        "id": 5231,
+        "precio": 349990,
+        "productImage": "/img/asteroide.png" 
+    },
+    {
+        "nombre": "Caníca de Teletransporte E.P.A",
+        "id": 3312,
+        "precio": 600000,
+        "productImage": "/img/mercurio.png" 
+    },
+    {
+        "nombre": "U.F.O Planeta DEXO E-39",
+        "id": 4839,
+        "precio": 1000000,
+        "productImage": "/img/ufo.png" 
+    },
+    {
+        "nombre": "O.V.N.I Galaxia UWU",
+        "id": 3451,
+        "precio": 459000,
+        "productImage": "/img/ovni.png" 
+    },
+    {
+        "nombre": "2 Boletos para viaje a Urano",
+        "id": 3458,
+        "precio": 235768,
+        "productImage": "/img/boletos-de-avion.png" 
+    }
+]
