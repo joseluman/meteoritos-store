@@ -9,7 +9,7 @@ const Item = ({productImage, nombre, precio, id, categoria}) => {
                 <img src={productImage} alt="Producto" />
                 <span>{nombre}</span>
                 <span>Cod SKU: {id}</span>
-                <span>$ {precio}</span>
+                <span>{Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precio)}</span>
             </div>
             <div className='cantidad'>
                 <button>-</button>

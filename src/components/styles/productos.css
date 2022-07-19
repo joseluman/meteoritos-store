@@ -79,6 +79,7 @@
     align-items: center;
     width: 50%;
     margin: auto;
+    margin-top: 40px;
 }
 .photo-content,
 .datos-producto.detail {
