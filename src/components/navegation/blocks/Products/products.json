@@ -4,34 +4,63 @@
         "id": 5231,
         "precio": 349990,
         "descripcion": "Piedra extraida de la luna por habitantes de Neptuno",
-        "productImage": "/img/asteroide.png" 
+        "productImage": "/img/asteroide.png",
+        "categoria": "Neptuno" 
+    },
+    {
+        "nombre": "Androide N° 54 R-33",
+        "id": 1231,
+        "precio": 457990,
+        "descripcion": "Androide capturado en la Isla Negra de la galaxia Épsilon, contiene técnologia 200 años más avanzada que la del planeta tierra.",
+        "productImage": "/img/androide.png",
+        "categoria": "Neptuno"  
+    },
+    {
+        "nombre": "Piedra preciosa Getnet",
+        "id": 4511,
+        "precio": 678990,
+        "descripcion": "Su valor es equivalente a 100 BitCoins, utilizada para construir armas de alto calibre.",
+        "productImage": "/img/neptuno.png",
+        "categoria": "Neptuno"  
+    },
+    {
+        "nombre": "Cohete espacial Sailor",
+        "id": 1121,
+        "precio": 678230,
+        "descripcion": "No tiene nada de especial, solo es un cohete.",
+        "productImage": "/img/cohete.png",
+        "categoria": "Neptuno"  
     },
     {
         "nombre": "Caníca de Teletransporte E.P.A",
         "id": 3312,
         "precio": 600000,
         "descripcion": "Te ayuda a viajar entre realidades paralelas, fue creada por un habitande de DEXO E-39",
-        "productImage": "/img/mercurio.png" 
+        "productImage": "/img/mercurio.png",
+        "categoria": "Urano"  
     },
     {
         "nombre": "U.F.O Planeta DEXO E-39",
         "id": 4839,
         "precio": 1000000,
         "descripcion": "Nave encontrada en una expedición a Saturno, su técnología es 200 años más avanzada que en la tierra.",
-        "productImage": "/img/ufo.png" 
+        "productImage": "/img/ufo.png",
+        "categoria": "Urano" 
     },
     {
         "nombre": "O.V.N.I Galaxia UWU",
         "id": 3451,
         "precio": 459000,
-        "descripcion": "Alienígena capturado en Plutón, se mantiene encarcelado 24/7, solo sabe decir UWU",
-        "productImage": "/img/ovni.png" 
+        "descripcion": "Alienígena capturado en Urano, se mantiene encarcelado 24/7 debido a su alta ternura, solo sabe decir UwU",
+        "productImage": "/img/ovni.png",
+        "categoria": "Urano" 
     },
     {
         "nombre": "2 Boletos para viaje a Urano",
         "id": 3458,
         "precio": 235768,
         "descripcion": "Podrás viajar a Urano y precenciar el eclípse de sus 27 lunas.",
-        "productImage": "/img/boletos-de-avion.png" 
+        "productImage": "/img/boletos-de-avion.png",
+        "categoria": "Urano"  
     }
 ]

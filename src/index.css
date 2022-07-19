@@ -41,3 +41,25 @@ code {
   letter-spacing: 3px;
   font-weight: 100;
 }
+.conteiner-categorias {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+a.url-categoria {
+  color: white;
+  background-color: #4645ff;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  border-radius: 10px;
+}
+.conteiner-categorias h2 {
+  margin-bottom: 40px;
+}
+a.url-categoria:hover {
+  color: white;
+}

@@ -1,24 +1,28 @@
 import { useEffect, useState } from 'react'
 import ItemDetail from './Products/ItemDetail'
-import products from './Products/product-detail.json'
+import { useParams } from 'react-router-dom'
+import fichaProducto from './Products/products.json'
 
 const ItemDetailContainer = () => {
+    const params = useParams()
+    const idParametro = params.id
     const [detalles, setDetalles] = useState([])
     useEffect(() => {
-        const details = new Promise (resolve => {
-            resolve(products)
+        const detallitos = new Promise (resolve => {
+            resolve(fichaProducto)
         })
-        details.then(result => {
+        detallitos.then(result => {
             setTimeout(() => {
-                console.log(result, "productos")
                 setDetalles(result)
             }, 2000) 
         })
 
     }, [])
-  return (
-    <ItemDetail pdp={detalles}/>
-  )
+    const productoFicha = detalles.filter(e => e.id == idParametro)
+
+    return (
+        <ItemDetail pdp={productoFicha}/>
+    )
 }
 
 export default ItemDetailContainer

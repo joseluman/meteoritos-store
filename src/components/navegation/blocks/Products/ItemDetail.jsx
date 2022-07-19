@@ -1,9 +1,6 @@
 import React from 'react'
 
 const ItemDetail = ({pdp}) => {
-
-    console.log(pdp, "a ver esta ficha")
-
   return ( 
   <>
     <h2 className='content-title'>Detalles del producto</h2>
