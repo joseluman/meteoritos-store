@@ -11,13 +11,7 @@ const Item = ({productImage, nombre, precio, id, categoria}) => {
                 <span>Cod SKU: {id}</span>
                 <span>{Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precio)}</span>
             </div>
-            <div className='cantidad'>
-                <button>-</button>
-                <span>1</span>
-                <button>+</button>
-            </div>
-            <Link to={'/item/' + id } className='details'>Ver Detalles</Link>
-            <button className="addToCart">AGREGAR</button>
+            <Link to={'/item/' + id } className="details">VER PRODUCTO</Link>
         </div>
     )
 }

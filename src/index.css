@@ -63,3 +63,22 @@ a.url-categoria {
 a.url-categoria:hover {
   color: white;
 }
+.total-cart {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+.cart-container{
+  text-decoration:none;
+}
+a.go-shop {
+  margin: 10px;
+  background-color: #4645ff;
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 10px;
+}

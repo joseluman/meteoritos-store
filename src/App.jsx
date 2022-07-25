@@ -9,23 +9,25 @@ import Categorias from './components/navegation/categorias';
 import Urano from './components/navegation/categories/Urano';
 import Neptuno from './components/navegation/categories/Neptuno';
 import ItemDetailContainer from './components/navegation/blocks/ItemDetailContainer';
+import CartProvider from './components/context/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar /> 
-      <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/categorias" element={<Categorias />} >
-          <Route path=':categoria' element={<Urano />} />
-          <Route path=':categoria' element={ <Neptuno />} />
-        </Route>
-        <Route path="/contacto" element={<Contacto />}/>
-        <Route path="/cart" element={<Cart />} />
-        <Route path='/item/:id' element={<ItemDetailContainer />} />
-      </Routes>
-      
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <NavBar /> 
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/categorias" element={<Categorias />} >
+            <Route path=':categoria' element={<Urano />} />
+            <Route path=':categoria' element={ <Neptuno />} />
+          </Route>
+          <Route path="/contacto" element={<Contacto />}/>
+          <Route path="/cart" element={<Cart />} />
+          <Route path='/item/:id' element={<ItemDetailContainer />} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

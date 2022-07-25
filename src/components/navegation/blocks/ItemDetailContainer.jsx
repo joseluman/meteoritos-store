@@ -20,6 +20,8 @@ const ItemDetailContainer = () => {
     }, [])
     const productoFicha = detalles.filter(e => e.id == idParametro)
 
+    console.log(productoFicha.id)
+
     return (
         <ItemDetail pdp={productoFicha}/>
     )

@@ -1,16 +1,30 @@
-import { useState }  from 'react'
+import { useState, useContext }  from 'react'
 import { ItemCount } from '../cartFunctions/ItemCount'
-import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
-const ItemDetail = ({ pdp }) => {
-    let [quantity, setQuantity] = useState(1);
+import { CartContext } from '../../../context/CartContext';
 
+const ItemDetail = ({ pdp }) => {
+    const { addItem } = useContext(CartContext);
+    const { isInCart } = useContext(CartContext);
+
+    let [quantity, setQuantity] = useState(1);
+    let [showCount, setShowCount] = useState(true)
+    
     const addToCart = () => {
-        Swal.fire({
-            title: 'Producto añadido con éxito',
-            icon: 'success',
-            confirmButtonText: 'Seguir comprando'
-        })
+    
+        const totalPrice = quantity * (pdp[0].precio)
+        const itemToCart = {
+            ...pdp,
+            quantity: quantity,
+            totalPrice: totalPrice,
+        }
+
+        isInCart(pdp[0].id) === false ?
+            addItem(itemToCart)
+            :
+            alert('ya compraste esto intenta comprando algo más')
+        setShowCount(false)
+
     }
 
   return ( 
