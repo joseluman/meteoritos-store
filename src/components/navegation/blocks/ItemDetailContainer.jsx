@@ -1,29 +1,32 @@
 import { useEffect, useState } from 'react'
 import ItemDetail from './Products/ItemDetail'
 import { useParams } from 'react-router-dom'
-import fichaProducto from './Products/products.json'
+import { doc, getDoc } from "firebase/firestore";
+import  db from '../../../firebase/config';
 
 const ItemDetailContainer = () => {
-    const params = useParams()
-    const idParametro = params.id
-    const [detalles, setDetalles] = useState([])
+    const [item, setItem] = useState([]);
+    const { itemId } = useParams();
+
     useEffect(() => {
-        const detallitos = new Promise (resolve => {
-            resolve(fichaProducto)
-        })
-        detallitos.then(result => {
-            setTimeout(() => {
-                setDetalles(result)
-            }, 2000) 
-        })
-
-    }, [])
-    const productoFicha = detalles.filter(e => e.id == idParametro)
-
-    console.log(productoFicha.id)
+        const docRef = doc(db, "items", itemId)
+        console.log(docRef)
+        getDoc(docRef)
+            .then((resp) => {
+                console.log(resp)
+                setItem({ id: resp.id, ...resp.data()})
+            })
+    }, [itemId]);
 
     return (
-        <ItemDetail pdp={productoFicha}/>
+        <ItemDetail
+        item={item}
+        id={item.id}
+        productImage={item.productImage}
+        nombre={item.nombre}
+        descripcion={item.descripcion}
+        precio={item.precio}
+        stock={item.stock}/>
     )
 }
 

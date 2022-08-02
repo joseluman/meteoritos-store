@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const Cart = () => {
 
     const { cart, emptyCart, priceToPay, deleteItem } = useContext(CartContext)
-
+    console.log(cart)
     return (
         <>  <br></br>
             <h2 className="content">Resumen del carrito </h2>
@@ -19,17 +19,17 @@ const Cart = () => {
                 
                 :
             cart.map((item) => (
-              <div key={item[0].id}>
+              <div key={item.id}>
                     <div  className="miniCartContainer">
                     <div className="miniCart_right">
-                            <img src={item[0].productImage} alt={item[0].nombre} />
+                            <img src={item.productImage} alt={item.nombre} />
                         </div>
                         <div className="miniCart_left">
                             <h5>{item.nombre}</h5>
                             <p>Cantidad: {item.quantity}</p>
                             <h6>Precio: {Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(item.totalPrice)}</h6>
                         </div>
-                        <div className="miniCart_trash" onClick={()=> deleteItem(item[0].id)}>🗑️</div>
+                        <div className="miniCart_trash" onClick={()=> deleteItem(item.id)}>🗑️</div>
                     </div>
                     
                        <hr></hr>

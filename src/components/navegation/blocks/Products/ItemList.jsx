@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from "swiper";
 import { Pagination } from "swiper";
 
-const ItemList = ({items}) => {
+const ItemList = ({ productos }) => {
+  console.log(productos)
   return (
     <Swiper
       loop={true}
@@ -13,7 +14,7 @@ const ItemList = ({items}) => {
       className='carrusel-productos'
     >
         {
-          items.map((e) => (
+          productos.map((e) => (
             <SwiperSlide key={e.id}>
               <Item {...e} />
             </SwiperSlide>

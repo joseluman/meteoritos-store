@@ -9,23 +9,20 @@ const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     const addItem = (item) => {
-
         if (item.quantity === 0) {
             alert(`Por favor añade productos a tu carrito`)
         } else {
             setCart([...cart, item]);
-            alert(`añadiste ${item.quantity} de ${item[0].nombre} a tu carrito`)
+            alert(`añadiste ${item.quantity} de ${item.nombre} a tu carrito`)
         }
     };
 
     const isInCart = (id) => {
-
-        return  cart.some((prod) => prod[0].id === id)
+        return cart.some((prod) => prod.id === id)
     }
 
     const deleteItem = (id) => {
-
-        setCart(cart.filter((prod) => prod[0].id !== id))
+        setCart(cart.filter((prod) => prod.id !== id))
     }
 
     const emptyCart = () => {
@@ -33,8 +30,7 @@ const CartProvider = ({children}) => {
     }
 
     const priceToPay = () => {
-
-        return cart.reduce((acc, prod) => acc += (prod[0].precio * prod.quantity), 0)
+        return cart.reduce((acc, prod) => acc += (prod.precio * prod.quantity), 0)
     }
 
     const totalQuantity = () => {

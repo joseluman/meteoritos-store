@@ -8,8 +8,8 @@ const Item = ({productImage, nombre, precio, id, categoria}) => {
             <div className='datos-producto'>
                 <img src={productImage} alt="Producto" />
                 <span>{nombre}</span>
-                <span>Cod SKU: {id}</span>
-                <span>{Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precio)}</span>
+                <span>{ categoria }</span>
+                <span><strong>Precio</strong> {Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(precio)}</span>
             </div>
             <Link to={'/item/' + id } className="details">VER PRODUCTO</Link>
         </div>
