@@ -1,15 +1,15 @@
 import { useEffect, useState } from 'react'
 import ItemList from './Products/ItemList'
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs} from 'firebase/firestore';
 import db  from '../../../firebase/config'
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
+    
 const ItemListContainer = () => {
 
     const { categoryId } = useParams()
     const [productos, setProductos] = useState([]);
-    console.log(categoryId)
     useEffect(() => {
         const productsRef = collection(db, "items");
 
@@ -33,7 +33,7 @@ const ItemListContainer = () => {
             {categoryId ? (
                 
                 productos.filter((e) => e.categoria == categoryId).map((item) => ( 
-                    <div className='info-card'>
+                    <div className='info-card' key={ item.id }>
                         <div className='datos-producto'>
                             <img src={item.productImage} alt="Producto" />
                             <span>{item.nombre}</span>

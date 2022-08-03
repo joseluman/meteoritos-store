@@ -10,10 +10,8 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         const docRef = doc(db, "items", itemId)
-        console.log(docRef)
         getDoc(docRef)
             .then((resp) => {
-                console.log(resp)
                 setItem({ id: resp.id, ...resp.data()})
             })
     }, [itemId]);

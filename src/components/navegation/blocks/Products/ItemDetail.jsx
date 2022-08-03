@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { CartContext } from '../../../context/CartContext';
 
 const ItemDetail = ({ item, id, productImage, nombre, descripcion, precio, stock }) => {
-    console.log(item, "lo que traje")
     const { addItem } = useContext(CartContext);
     const { isInCart } = useContext(CartContext);
 

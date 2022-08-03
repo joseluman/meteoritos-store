@@ -1,11 +1,27 @@
 import { CartContext } from "../context/CartContext";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom"
- 
+import { collection, addDoc } from 'firebase/firestore';
+import db from "../../firebase/config";
+
 const Cart = () => {
 
-    const { cart, emptyCart, priceToPay, deleteItem } = useContext(CartContext)
-    console.log(cart)
+    const { cart, emptyCart, priceToPay, deleteItem } = useContext(CartContext);
+    const [orderId, setOderId] = useState();
+
+    const pagarPedido = () => {
+        const valorTotalOrden = Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(priceToPay())
+        const order = {
+            comprador: { nombre: "José Manuel", telefono: 954983762, email: "email.prueba@prueba.com" },
+            items: [cart][0],
+            totalCompra: valorTotalOrden
+        }
+
+        const orderCollection = collection(db, "orders");
+
+        addDoc(orderCollection, order).then(({id}) => setOderId(id))
+    }
+
     return (
         <>  <br></br>
             <h2 className="content">Resumen del carrito </h2>
@@ -38,6 +54,7 @@ const Cart = () => {
             }
             <div>Precio total {Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(priceToPay())}</div>
             <button onClick={emptyCart}>vaciar carrito</button>
+            <button onClick={pagarPedido}>Pagar</button>
         </>
     );
 }

@@ -4,7 +4,6 @@ import { Navigation } from "swiper";
 import { Pagination } from "swiper";
 
 const ItemList = ({ productos }) => {
-  console.log(productos)
   return (
     <Swiper
       loop={true}
