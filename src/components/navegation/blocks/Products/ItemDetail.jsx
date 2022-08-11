@@ -6,6 +6,8 @@ import { CartContext } from '../../../context/CartContext';
 const ItemDetail = ({ item, id, productImage, nombre, descripcion, precio, stock }) => {
     const { addItem } = useContext(CartContext);
     const { isInCart } = useContext(CartContext);
+    const { cart, setCart} = useContext(CartContext);
+    const { totalQuantity } = useContext(CartContext)
 
     let [quantity, setQuantity] = useState(1);
     let [showCount, setShowCount] = useState(true)
@@ -19,12 +21,13 @@ const ItemDetail = ({ item, id, productImage, nombre, descripcion, precio, stock
             totalPrice: totalPrice,
         }
 
-        isInCart(item.id) === false ?
+        if (isInCart(item.id) === false) {
             addItem(itemToCart)
-            :
-            alert('ya compraste esto intenta comprando algo más')
-        setShowCount(false)
-
+        } else { 
+            cart.filter((e) => e.id === id).map((e) => e.quantity = e.quantity + quantity)
+            alert("Agregaste " + quantity + " productos adicionales")
+            setCart([...cart])
+        }
     }
 
   return ( 

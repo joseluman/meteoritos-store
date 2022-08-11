@@ -6,6 +6,7 @@ import { useContext } from "react";
 
 const CartWidget = () => {
   const { totalQuantity } = useContext(CartContext)
+
   return (
     <Link to="/cart" className='cart-container'>
       <img src={ShoppingBagIcon} alt="Shopping Bag" />
