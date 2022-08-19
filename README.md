@@ -14,6 +14,15 @@ Utilizamos el contexto para poder guardar los datos de la navegación, en este c
 
 ![items](https://github.com/joseluman/meteoritos-store/blob/main/public/img/items.png?raw=true)
 
+Una vez que se finaliza la compra se envía la información de la compra a firebase y se muestra un número de orden, simulando una compra real. 
+
+![orders](https://github.com/joseluman/meteoritos-store/blob/main/public/img/orders.png?raw=true)
+
+### Flujo de compra
+
+![orders](https://github.com/joseluman/meteoritos-store/blob/main/public/img/compra.gif?raw=true)
+
+
 
 
 
