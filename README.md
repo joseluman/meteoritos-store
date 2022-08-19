@@ -12,7 +12,7 @@ La tienda se basa en una lógica utilizando Firebase como database de productos,
 
 Utilizamos el contexto para poder guardar los datos de la navegación, en este caso los productos que se agregan al carro para poder tener una coherencia con el UI. 
 
-![Esta es una imagen](https://myoctocat.com/assets/images/base-octocat.svg)
+![items](https://github.com/joseluman/meteoritos-store/blob/main/public/img/items.png?raw=true)
 
 
 
