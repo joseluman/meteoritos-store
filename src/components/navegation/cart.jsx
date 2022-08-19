@@ -38,6 +38,7 @@ const Cart = () => {
     
             const orderCollection = collection(db, "orders");
             addDoc(orderCollection, order).then(({ id }) => alert("Gracias por comprar, su número de orden es " + id))  
+            emptyCart()
         } 
     }
 
